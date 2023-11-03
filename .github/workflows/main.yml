@@ -1,0 +1,16 @@
+name: Auto Add Issues to Project
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  auto_add_todo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Add to Project
+      uses: srt32/add-issue-to-project@v1
+      with:
+        project-name: 'Finding restaurants'
+        column-name: 'Todo'
